@@ -1,0 +1,137 @@
+/* Custom Styles for Birthday Library System */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --background-color: #f4f7f9;
+    --card-background: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Updated Background Image */
+    background: url('university.jpg') no-repeat center center fixed;
+    background-size: cover;
+  
+    color: #333;
+    padding-top: 20px;
+}
+
+.wrapper {
+    margin: 50px auto;
+    padding: 30px;
+    /* Added slight transparency to global wrapper for readability over image */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Header and Typography */
+h1, h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Forms and Buttons */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* Dashboard Cards */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+/* Table Styling (for students.php) */
+.table {
+    margin-top: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Wish Card Styling (for wishes.php) */
+.wish-card {
+    background-color: var(--card-background);
+    border: 1px solid #e9ecef;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.wish-card:hover {
+    border-color: var(--primary-color);
+}
+
+.wish-card h5 {
+    color: var(--danger-color);
+    margin-bottom: 10px;
+}
+
+.wish-card img {
+    max-height: 200px;
+    object-fit: cover;
+    border: 2px solid #eee;
+}
+
+.wish-message {
+    padding: 10px;
+    border-left: 3px solid var(--success-color);
+    background-color: #f9fff9;
+    margin-top: 10px;
+}
