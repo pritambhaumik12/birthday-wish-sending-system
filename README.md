@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="BWU_logo.png" alt="BWU Logo" width="130" height="auto" />
-</p>
-
-<h1 align="center">🎂 BWU Birthday Wish Automation & Student Portal</h1>
+<h1 align="center">🎂 Birthday Wish Automation & Student Portal</h1>
 
 <p align="center">
   <strong>An Enterprise-Grade, Automated Birthday Greeting Dispatcher & Dynamic Multi-Batch Student Information Management System</strong>
@@ -31,7 +27,7 @@
 
 ## 📌 Overview
 
-**BWU Birthday Wish Automation** is a production-ready, university-grade web application built to automate the celebration of student birthdays while providing an end-to-end student lifecycle and batch record management system. 
+**Birthday Wish Automation & Student Portal** is a production-ready, institutional-grade web application built to automate the celebration of student birthdays while providing an end-to-end student lifecycle and batch record management system. 
 
 The application automatically scans database records daily for students celebrating birthdays, generates rich HTML email cards with personalized greetings and dynamic card attachments, and dispatches them via secure SMTP. In addition, the platform features a responsive administration dashboard, multi-year batch partitioning, self-service student onboarding with OTP verification, bulk CSV data tools, and soft-delete trash controls.
 
@@ -45,7 +41,7 @@ The application automatically scans database records daily for students celebrat
 <details open>
 <summary><b>📑 Table of Contents (Click to collapse / expand)</b></summary>
 
-- [🎂 BWU Birthday Wish Automation & Student Portal](#-bwu-birthday-wish-automation--student-portal)
+- [🎂 Birthday Wish Automation & Student Portal](#-birthday-wish-automation--student-portal)
   - [📌 Overview](#-overview)
   - [🎯 Quick Links & Interactive Navigator](#-quick-links--interactive-navigator)
   - [✨ Key Features](#-key-features)
@@ -190,10 +186,10 @@ sequenceDiagram
 
 ```bash
 # Clone the repository to your local web root
-git clone https://github.com/your-username/bwu-birthday-automation.git
+git clone https://github.com/your-username/birthday-automation.git
 
 # Move into project directory
-cd bwu-birthday-automation
+cd birthday-automation
 ```
 
 ---
@@ -203,11 +199,11 @@ cd bwu-birthday-automation
 1. Open your database administration tool (**phpMyAdmin**, **MySQL Workbench**, or CLI).
 2. Create a new database:
    ```sql
-   CREATE DATABASE bwu_bday CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+   CREATE DATABASE birthday_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
    ```
 3. Import the initial database schema and master seed data:
    ```bash
-   mysql -u root -p bwu_bday < if0_40768646_birthday_wish_automation.sql
+   mysql -u root -p birthday_db < if0_40768646_birthday_wish_automation.sql
    ```
 4. Configure database credentials in [`config.php`](file:///d:/00.My%20Projects/CV%20Projects/birthday/config.php):
    ```php
@@ -215,7 +211,7 @@ cd bwu-birthday-automation
    define('DB_SERVER', 'localhost');
    define('DB_USERNAME', 'root');     // Your database user
    define('DB_PASSWORD', '');         // Your database password
-   define('DB_NAME', 'bwu_bday');     // Your database name
+   define('DB_NAME', 'birthday_db');  // Your database name
    ```
 
 ---
@@ -251,7 +247,7 @@ To send automated birthday wishes, verification OTPs, and admin credentials, you
 1. Log into your Google Account at [myaccount.google.com](https://myaccount.google.com/).
 2. Navigate to **Security** > **2-Step Verification** (make sure 2FA is turned **ON**).
 3. Scroll to the bottom and click **App passwords**.
-4. In the "App name" field, enter `BWU Birthday System` and click **Create**.
+4. In the "App name" field, enter `Birthday Automation System` and click **Create**.
 5. Copy the generated **16-character passkey** (e.g. `abcd efgh ijkl mnop`).
 6. Paste this key into the configuration files below in place of `USE_YOUR_OWN_API_KEY`.
 
@@ -469,8 +465,7 @@ php cron_send_emails.php
 │   ├── PHPMailer/                 # PHPMailer SMTP library
 │   ├── uploads/                   # Uploaded greeting cards & custom artwork
 │   ├── style.css                  # Custom styling overrides
-│   ├── BWU_logo.png               # Official institution branding logo
-│   └── university.jpg             # Institution campus banner image
+│   └── university.jpg             # Campus / banner artwork image
 ```
 
 ---
@@ -504,6 +499,6 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 ---
 
 <p align="center">
-  Developed with ❤️ for <strong>Brainware University</strong> & Academic Communities worldwide.<br/>
+  Developed with ❤️ for Academic & Educational Communities worldwide.<br/>
   <sub>Automating smiles, one birthday at a time. 🎂</sub>
 </p>
